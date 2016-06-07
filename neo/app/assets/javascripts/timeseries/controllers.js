@@ -61,7 +61,7 @@ angular.module('cloudberry.timeseries', ['cloudberry.common'])
             var ndx = crossfilter(newVal);
             var timeDimension = ndx.dimension(function (d) {
               if (d.time != null) return d.time;
-            })
+            });
             var timeGroup = timeDimension.group().reduceSum(function (d) {
               return d.count;
             });
